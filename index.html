@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aung Paing | Web Developer & System Architect</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050505;
+            --accent: #00f2ff; /* Cyan Neon */
+            --accent-dim: rgba(0, 242, 255, 0.1);
+            --text: #ffffff;
+            --text-dim: #94a3b8;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed; width: 100%; padding: 1.5rem 8%;
+            display: flex; justify-content: space-between; align-items: center;
+            background: rgba(5, 5, 5, 0.8); backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255,255,255,0.05); z-index: 1000;
+        }
+
+        .logo { font-weight: 800; font-size: 1.4rem; letter-spacing: -1px; text-decoration: none; color: white; }
+        .logo span { color: var(--accent); }
+
+        .nav-links a {
+            color: var(--text-dim); text-decoration: none;
+            margin-left: 2rem; font-size: 0.9rem; font-weight: 600; transition: 0.3s;
+        }
+        .nav-links a:hover { color: var(--accent); }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh; display: flex; flex-direction: column;
+            justify-content: center; padding: 0 10%;
+            background: radial-gradient(circle at 80% 20%, #111 0%, #050505 100%);
+        }
+
+        .hero span.tag { color: var(--accent); font-weight: 800; letter-spacing: 2px; font-size: 0.8rem; }
+        .hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; margin: 1rem 0; }
+        .hero p { font-size: 1.2rem; color: var(--text-dim); max-width: 650px; margin-bottom: 2.5rem; }
+
+        /* Impact Grid (Stats) */
+        .impact-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr);
+            gap: 2rem; max-width: 800px;
+        }
+
+        .stat-card {
+            border-left: 2px solid var(--accent); padding-left: 1.5rem;
+        }
+
+        .stat-card h4 { font-size: 1.5rem; color: var(--accent); }
+        .stat-card p { font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase; }
+
+        /* CTA Buttons */
+        .cta-group { display: flex; gap: 1rem; margin-top: 3rem; }
+        .btn {
+            padding: 12px 30px; border-radius: 6px; text-decoration: none;
+            font-weight: 700; transition: 0.3s; font-size: 0.9rem;
+        }
+        .btn-primary { background: var(--accent); color: #000; }
+        .btn-primary:hover { box-shadow: 0 0 20px var(--accent); transform: translateY(-2px); }
+
+        .btn-secondary { border: 1px solid #333; color: white; }
+        .btn-secondary:hover { border-color: var(--accent); }
+
+        /* Section Layout */
+        section.work-teaser { padding: 100px 10%; }
+        h2 { font-size: 2.5rem; margin-bottom: 3rem; }
+
+        .teaser-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 30px;
+        }
+
+        .teaser-card {
+            background: #0f0f12; border: 1px solid #1a1a1a;
+            padding: 3rem; border-radius: 20px; transition: 0.4s;
+            text-decoration: none; color: inherit;
+        }
+
+        .teaser-card:hover { border-color: var(--accent); transform: scale(1.02); }
+        .teaser-card .category { color: var(--accent); font-size: 0.7rem; font-weight: 800; text-transform: uppercase; }
+        .teaser-card h3 { font-size: 1.8rem; margin: 10px 0; }
+        .teaser-card p { color: var(--text-dim); margin-bottom: 1.5rem; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 3rem; }
+            .impact-grid { grid-template-columns: 1fr; }
+            .teaser-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">AUNG <span>PAING</span></a>
+        <div class="nav-links">
+            <a href="projects.html">Projects</a>
+            <a href="info.html">Background</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <span class="tag">WEB DEVELOPER & SYSTEM ARCHITECT</span>
+        <h1>Building Secure, <br>Scalable Systems.</h1>
+        <p>Experienced full-stack developer with 5+ years of expertise in PHP, Laravel, and Cloud Architecture. I specialize in bridging the gap between complex logic and clean design.</p>
+        
+        <div class="impact-grid">
+            <div class="stat-card">
+                <h4>6+ Years</h4>
+                <p>Professional Experience</p>
+            </div>
+            <div class="stat-card">
+                <h4>Apex Tech</h4>
+                <p>Industry Expertise</p>
+            </div>
+            <div class="stat-card">
+                <h4>CMS Expert</h4>
+                <p>Custom Deployments</p>
+            </div>
+        </div>
+
+        <div class="cta-group">
+            <a href="projects.html" class="btn btn-primary">View My Work</a>
+            <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
+        </div>
+    </header>
+
+    <section class="work-teaser">
+        <h2>Selected <span style="color: var(--accent);">Impact</span></h2>
+        <div class="teaser-grid">
+            
+            <a href="projects.html" class="teaser-card">
+                <span class="category">Fintech & Data</span>
+                <h3>2D Stocks</h3>
+                <p>High-performance reporting system featuring optimized real-time stock ticker calculations, hardened security layers, and secure automated mailing services, with a specialized focus on system performance and refined UI layout design.</p>
+                <span style="color: var(--accent); font-weight: 700;">Explore Logic →</span>
+            </a>
+
+            <a href="projects.html" class="teaser-card">
+                <span class="category">Enterprise Security</span>
+                <h3>2D Mandrake</h3>
+                <p>A secure command center for identity management and system oversight, integrating MFA, secret-key logins, and automated logs with detailed IP-tracking and permission-based data controls.</p>
+                <span style="color: var(--accent); font-weight: 700;">Explore Security →</span>
+            </a>
+
+        </div>
+    </section>
+
+<footer style="padding: 4rem 10% 2rem; border-top: 1px solid #1a1a1a; margin-top: auto;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px; margin-bottom: 40px;">
+            
+            <div style="max-width: 450px;">
+                <a href="index.html" class="logo" style="display: inline-block; margin-bottom: 15px;">AUNG <span>PAING</span></a>
+                <p style="color: var(--text-dim); font-size: 0.9rem; line-height: 1.8;">
+                    Full-stack engineer specializing in high-integrity systems, fintech architecture, and secure enterprise solutions. 
+                    Bridging the gap between complex backend logic and seamless user experiences.
+                </p>
+            </div>
+
+            <div style="text-align: right;">
+                <p style="color: var(--accent); font-weight: 800; font-size: 0.75rem; letter-spacing: 2px; margin-bottom: 10px; text-transform: uppercase;">
+                    Status: Available for Projects
+                </p>
+                <p style="color: var(--text); font-weight: 600; margin-bottom: 5px;">aungpaing95@gmail.com</p>
+                <p style="color: var(--text-dim); font-size: 0.9rem;">Bangkok, Thailand & Remote</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.03); color: #444; font-size: 0.8rem; letter-spacing: 1px;">
+            &copy; <span id="year"></span> AUNG PAING. BUILT WITH PRECISION AND CODE.
+        </div>
+    </footer>
+
+<script>
+    // System Architect tip: Keep it dry. This updates all instances.
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

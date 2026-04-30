@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Aung Paing</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050505;
+            --accent: #00f2ff;
+            --surface: #0f0f12;
+            --text: #ffffff;
+            --text-dim: #94a3b8;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            line-height: 1.7;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 1.5rem 8%; display: flex; justify-content: space-between; align-items: center;
+            background: rgba(5, 5, 5, 0.9); backdrop-filter: blur(10px);
+            position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #1a1a1a;
+        }
+        .logo { font-weight: 800; text-decoration: none; color: white; font-size: 1.2rem; }
+        .logo span { color: var(--accent); }
+        .nav-links a { color: var(--text-dim); text-decoration: none; margin-left: 2rem; font-size: 0.9rem; }
+        .nav-links a.active { color: var(--accent); }
+
+        /* Content */
+        .container { padding: 80px 10%; max-width: 1100px; margin: 0 auto; }
+
+        .summary-box { margin-bottom: 80px; }
+        .summary-box h1 { font-size: 3rem; margin-bottom: 20px; }
+        .summary-box p { font-size: 1.15rem; color: var(--text-dim); }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+
+        .skill-group h3 {
+            color: var(--accent);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #222;
+            padding-bottom: 10px;
+        }
+
+        .skill-list { display: flex; flex-wrap: wrap; gap: 10px; }
+        .skill-item {
+            background: var(--surface);
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            border: 1px solid #1a1a1a;
+        }
+
+        /* Education & Language */
+        .meta-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 60px;
+            border-top: 1px solid #1a1a1a;
+            padding-top: 60px;
+        }
+
+        .edu-item { margin-bottom: 30px; }
+        .edu-item h4 { font-size: 1.2rem; margin-bottom: 5px; }
+        .edu-item span { color: var(--accent); font-weight: 600; font-size: 0.9rem; }
+        .edu-item p { color: var(--text-dim); margin-top: 5px; }
+
+        @media (max-width: 768px) {
+            .meta-grid { grid-template-columns: 1fr; }
+        }
+        .profile-container {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid var(--accent);
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(0, 242, 255, 0.2);
+        }
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: 0.5s;
+        }
+        .profile-img:hover {
+            filter: grayscale(0%);
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">AUNG <span>PAING</span></a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="info.html" class="active">Background</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        
+        <section class="summary-box">
+            <div class="profile-container">
+                <img src="assets/aung-paing.jpg" alt="Aung Paing" class="profile-img">
+            </div>
+            <h1>Expertise & <span style="color: var(--accent);">Vision</span></h1>
+            <p>
+                I am a Web Developer with <strong>over 6 years</strong> of professional experience in full-stack engineering and CMS architecture. 
+                My career has been defined by delivering secure, high-quality results for diverse industries—from fintech startups in Thailand 
+                to large-scale e-commerce systems in Myanmar. 
+            </p>
+            <p style="margin-top: 20px;">
+                I am committed to clean code, strictly meeting deadlines, and architecting solutions that drive company revenue and user satisfaction.
+            </p>
+        </section>
+
+        <div class="skills-grid">
+            <div class="skill-group">
+                <h3>Backend & Core</h3>
+                <div class="skill-list">
+                    <span class="skill-item">PHP</span>
+                    <span class="skill-item">Laravel</span>
+                    <span class="skill-item">Node.js</span>
+                    <span class="skill-item">Python</span>
+                    <span class="skill-item">Java</span>
+                    <span class="skill-item">C#</span>
+                    <span class="skill-item">OOP</span>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <h3>Frontend & UI</h3>
+                <div class="skill-list">
+                    <span class="skill-item">JavaScript</span>
+                    <span class="skill-item">TypeScript</span>
+                    <span class="skill-item">React.js</span>
+                    <span class="skill-item">Vue.js</span>
+                    <span class="skill-item">jQuery</span>
+                    <span class="skill-item">Bootstrap</span>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <h3>Database & Cloud</h3>
+                <div class="skill-list">
+                    <span class="skill-item">MySQL</span>
+                    <span class="skill-item">PostgreSQL</span>
+                    <span class="skill-item">MongoDB</span>
+                    <span class="skill-item">AWS</span>
+                    <span class="skill-item">SQL Server</span>
+                    <span class="skill-item">Git</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="meta-grid">
+            <div class="education">
+                <h3 style="margin-bottom: 30px; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;">Education</h3>
+                
+                <div class="edu-item">
+                    <h4>Bachelor in Computer Science</h4>
+                    <span>University of Greenwich (2016 — 2017)</span>
+                </div>
+
+                <div class="edu-item">
+                    <h4>Level 5 Diploma in Computing</h4>
+                    <span>NCC Education (2014 — 2015)</span>
+                </div>
+
+                <div class="edu-item">
+                    <h4>Level 4 Diploma in Computing</h4>
+                    <span>NCC Education (2012 — 2013)</span>
+                </div>
+            </div>
+
+            <div class="languages">
+                <h3 style="margin-bottom: 30px; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;">Languages</h3>
+                <p><strong>English</strong> — Conversational</p>
+                <p><strong>Burmese</strong> — Native</p>
+                
+                <div style="margin-top: 40px; padding: 20px; background: var(--surface); border-radius: 10px; border: 1px solid #222;">
+                    <p style="font-size: 0.8rem; color: var(--accent); margin-bottom: 10px;">DIRECT CONNECT</p>
+                    <p style="font-size: 0.9rem;">aungpaing95@gmail.com</p>
+                    <p style="font-size: 0.9rem;">+66 958799409</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer style="padding: 4rem 10% 2rem; border-top: 1px solid #1a1a1a; margin-top: auto;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px; margin-bottom: 40px;">
+            
+            <div style="max-width: 450px;">
+                <a href="index.html" class="logo" style="display: inline-block; margin-bottom: 15px;">AUNG <span>PAING</span></a>
+                <p style="color: var(--text-dim); font-size: 0.9rem; line-height: 1.8;">
+                    Full-stack engineer specializing in high-integrity systems, fintech architecture, and secure enterprise solutions. 
+                    Bridging the gap between complex backend logic and seamless user experiences.
+                </p>
+            </div>
+
+            <div style="text-align: right;">
+                <p style="color: var(--accent); font-weight: 800; font-size: 0.75rem; letter-spacing: 2px; margin-bottom: 10px; text-transform: uppercase;">
+                    Status: Available for Projects
+                </p>
+                <p style="color: var(--text); font-weight: 600; margin-bottom: 5px;">aungpaing95@gmail.com</p>
+                <p style="color: var(--text-dim); font-size: 0.9rem;">Bangkok, Thailand & Remote</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.03); color: #444; font-size: 0.8rem; letter-spacing: 1px;">
+            &copy; <span id="year"></span> AUNG PAING. BUILT WITH PRECISION AND CODE.
+        </div>
+    </footer>
+<script>
+    // System Architect tip: Keep it dry. This updates all instances.
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
