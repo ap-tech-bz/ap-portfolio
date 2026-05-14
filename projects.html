@@ -89,32 +89,82 @@
             .project-grid { grid-template-columns: 1fr; }
         }
 
-        .project-details-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
-}
+    .project-details-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+    }
 
-.detail-box {
-    background: rgba(255, 255, 255, 0.03);
-    border-left: 3px solid var(--accent); /* Use your neon cyan color here */
-    padding: 20px;
-    border-radius: 4px;
-    transition: transform 0.3s ease;
-}
+    .detail-box {
+        background: rgba(255, 255, 255, 0.03);
+        border-left: 3px solid var(--accent); /* Use your neon cyan color here */
+        padding: 20px;
+        border-radius: 4px;
+        transition: transform 0.3s ease;
+    }
 
-.detail-box:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.05);
-}
+    .detail-box:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.05);
+    }
 
-.detail-box h4 {
-    margin-top: 0;
-    color: var(--accent);
-    font-size: 1.1rem;
-    letter-spacing: 0.5px;
-}
+    .detail-box h4 {
+        margin-top: 0;
+        color: var(--accent);
+        font-size: 1.1rem;
+        letter-spacing: 0.5px;
+    }
+
+    /* Link Container */
+    .card-actions {
+        margin-top: auto;
+        padding-top: 20px;
+        display: flex;
+        gap: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .project-link {
+        text-decoration: none;
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        transition: 0.3s;
+    }
+
+    /* Primary Link (View Project) */
+    .link-primary {
+        color: var(--accent);
+    }
+
+    .link-primary:hover {
+        color: #fff;
+        text-shadow: 0 0 8px var(--accent);
+    }
+
+    /* Secondary Link (GitHub/Code) */
+    .link-secondary {
+        color: var(--text-dim);
+    }
+
+    .link-secondary:hover {
+        color: var(--text);
+    }
+
+    /* Add an arrow icon using CSS */
+    .project-link::after {
+        content: '→';
+        transition: transform 0.3s;
+    }
+
+    .project-link:hover::after {
+        transform: translateX(4px);
+    }
     </style>
 </head>
 <body>
@@ -137,17 +187,17 @@
     <div class="category-title">Dubay Business & Services</div>
     <section class="project-grid">
         <div class="card">
-            <h3>2D Stocks</h3>
+            <h3>Stocks App</h3>
             <p>High-performance reporting system for stock tickers. Features custom price/volume threshold alerts and real-time GScript integration for automated client reporting.</p>
             <div class="tech-stack">
-                <span class="tech-tag">PHP</span><span class="tech-tag">GScript</span><span class="tech-tag">API Integration</span>
+                <span class="tech-tag">CodeIgniter 4</span><span class="tech-tag">JQuery</span><span class="tech-tag">GScript</span><span class="tech-tag">API Integration</span>
             </div>
         </div>
         <div class="card">
             <h3>Mandrake Security</h3>
             <p>Administrative control system with secret-key URL login and Python-automated database generation for vulnerability and audit tracking.</p>
             <div class="tech-stack">
-                <span class="tech-tag">Python</span><span class="tech-tag">PostgreSQL</span><span class="tech-tag">Security MFA</span>
+                <span class="tech-tag">Python</span><span class="tech-tag">CodeIgniter 4</span><span class="tech-tag">PostgreSQL</span><span class="tech-tag">Security MFA</span>
             </div>
         </div>
         <div class="card">
@@ -158,6 +208,9 @@
                 <span class="tech-tag">MySQL</span>
                 <span class="tech-tag">Stripe API</span>
                 <span class="tech-tag">MFA Security</span>
+            </div>
+            <div class="card-actions">
+                <a href="https://somaticinkblots.com" class="project-link link-primary" target="_blank">Visit Site</a>
             </div>
         </div>
 
@@ -170,6 +223,9 @@
                 <span class="tech-tag">Service Architecture</span>
                 <span class="tech-tag">Database Design</span>
             </div>
+            <div class="card-actions">
+                <a href="https://mangohomes.us" class="project-link link-primary" target="_blank">Visit Site</a>
+            </div>
         </div>
     </section>
 
@@ -180,9 +236,29 @@
             <h3>MPD Property App</h3>
             <p>A comprehensive real estate engine. I architected the core user management system, implementing complex role-based permissions and authentication. Heavily manipulated multi-source API data for real-time property and agent synchronization.</p>
             <div class="tech-stack">
-                <span class="tech-tag">API Data Manipulation</span>
+                <span class="tech-tag">Laravel</span>
+                <span class="tech-tag">MySQL</span>
                 <span class="tech-tag">RBAC Security</span>
-                <span class="tech-tag">Backend Logic</span>
+                <span class="tech-tag">Task Scheduling</span>
+            </div>
+            <div class="card-actions">
+                <a href="https://myanmarpropertydealer.com" class="project-link link-primary" target="_blank">Visit Site</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="status-badge" style="color: var(--accent); font-size: 0.7rem; margin-bottom: 10px; font-weight: 800;">FINTECH & HEALTHCARE</div>
+            <h3>KPS Healthcare</h3>
+            <p>
+                Engineered a dynamic healthcare portal focused on <strong>data visualization and security</strong>. 
+                Developed custom UI rendering engines to present complex <strong>Lab Results and Medical Invoices</strong> retrieved via REST APIs. 
+                Implemented specialized script snippets to bridge mobile API compatibility with backend administrative interfaces.
+            </p>
+            <div class="tech-stack">
+                <span class="tech-tag">Dynamic UI/UX</span>
+                <span class="tech-tag">API Data</span>
+                <span class="tech-tag">Mobile-Backend</span>
+                <span class="tech-tag">Secure Auth</span>
             </div>
         </div>
 
